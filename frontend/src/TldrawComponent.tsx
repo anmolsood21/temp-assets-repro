@@ -17,6 +17,7 @@ export default function TldrawComponent() {
 
           (async () => {
             try {
+              // Images in the public folder are available at the root URL
               const response = await fetch("/apple.png");
               const blob = await response.blob();
               const file = new File([blob], "apple.png", { type: "image/png" });
